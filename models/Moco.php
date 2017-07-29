@@ -1,14 +1,14 @@
 <?php
 
-class TimeTracker implements TimeTrackerInterface
+class Moco implements TimeTrackerInterface
 {
     private $communicator;
     private $config;
 
-    public function __construct()
+    public function __construct(CommunicatorInterface $communicator, ConfigInterface $config)
     {
-        $this->communicator = new Communicator();
-        $this->config = new Config();
+        $this->communicator = $communicator;
+        $this->config = $config;
     }
 
     public function createSprint($name)

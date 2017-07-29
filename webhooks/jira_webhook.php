@@ -3,6 +3,6 @@
 $controller = new MainController(
     new Config(),
     new Communicator(),
-    new TimeTracker()
+    new Moco()
 );
 $controller->render();
