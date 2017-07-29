@@ -26,6 +26,7 @@ class MainController
             $this->config->username,
             $this->config->password
         );
+        
         $this->processData($data);
 
     }
@@ -36,7 +37,7 @@ class MainController
 
         foreach ($data->contents->issuesNotCompletedInCurrentSprint as $ticket)
         {
-            $this->timeTracker->createTicket($ticket->summary);
+            $this->timeTracker->createTicket($ticket->summary, $ticket->typeName);
         }
     }
 
