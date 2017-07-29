@@ -17,7 +17,7 @@ class TimeTracker implements TimeTrackerInterface
             $name,
             $this->config->leader_id,
             $this->config->customer_id,
-            $this->config->domain,
+            $this->config->client,
             $this->config->api_key
         );
     }

@@ -26,7 +26,7 @@ class Communicator implements CommunicatorInterface
     {
         $identifier = 0;
         $projects = $this->mocoContent(
-            $this->config->domain,
+            $this->config->client,
             $this->config->api_key
         );
 
